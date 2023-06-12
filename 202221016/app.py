@@ -13,7 +13,9 @@ import matplotlib.pyplot as plt
 from scipy import signal
 import control
 
-st.title('Graphs')
+st.title("제어공학 2번문제")
+st.header("조상희")
+st.subheader("202221016")
 
 #전달 함수 정의
 G = control.TransferFunction([100],[1,5,6])
