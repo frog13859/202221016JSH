@@ -22,9 +22,10 @@ G = control.TransferFunction([100],[1,5,6])
 
 # 폐루프 전달함수 계산
 G1 = control.feedback(G)
+G2(s) = 100 / (s^2 + 5s + 6)
 
 st.subheader("Transfer Function G(s):")
-st.write(G1)
+st.write(G2)
 
 #단위 계산 응답
 num = [100]
