@@ -22,8 +22,8 @@ G = control.TransferFunction([100])
 G1 = control.TransferFunction([1,5,6])
 
 # 폐루프 전달함수 계산
-G3 = G * G2
-G3 = control.feedback(G*G2)
+G4 = G * G1
+G3 = control.feedback(G*G1)
 
 # 전달 함수 G(s) 출력
 st.subheader("Transfer Function G(s):")
