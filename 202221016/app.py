@@ -24,8 +24,8 @@ G = control.TransferFunction([100],[1,5,6])
 G1 = control.feedback(G)
 
 # 전달 함수 G(s) 출력
-st.subheader("Transfer Function G(s):")
-st.write(G1)
+st.write("폐루프 전달함수 : ")
+st.latex(r"\frac{100}{s^2+5s+106}")
 
 #단위 계산 응답
 num = [100]
