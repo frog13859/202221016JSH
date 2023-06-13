@@ -18,14 +18,16 @@ st.header("조상희")
 st.subheader("202221016")
 
 #전달 함수 정의
-G = control.TransferFunction([100],[1,5,6])
+G = control.TransferFunction([100])
+G1 = control.TransferFunction([1,5,6])
 
 # 폐루프 전달함수 계산
-G1 = control.feedback(G)
-G1(s) = 100 / (s^2 + 5s + 6)
+G3 = G * G2
+G3 = control.feedback(G*G2)
 
+# 전달 함수 G(s) 출력
 st.subheader("Transfer Function G(s):")
-st.write(G1)
+st.write(G3)
 
 #단위 계산 응답
 num = [100]
